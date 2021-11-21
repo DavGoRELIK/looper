@@ -1,0 +1,10 @@
+<div *ngIf="isEntered" class="looper">
+  <div class="looper-tracks">
+    <app-track *ngFor="let trackData of tracks" [trackData]="trackData" (onTrackClick)="onTrackChange($event)"></app-track>
+  </div>
+  <div class="looper-buttons">
+    <button pButton pRipple type="button" label="Play" (click)="this.play()"></button>
+    <button pButton pRipple type="button" label="Stop" (click)="this.pause()"></button>
+  </div>
+</div>
+<button *ngIf="!isEntered" pButton pRipple type="button" label="Enter Loop Machine" (click)="this.start()"></button>

@@ -1,0 +1,4 @@
+<div class="track" (click)="onClickTrack()">
+  <img *ngIf="!active" src="assets/icons/{{trackData.iconName}}.png">
+  <img *ngIf="active" src="assets/icons/{{trackData.iconName}}_active.png">
+</div>
